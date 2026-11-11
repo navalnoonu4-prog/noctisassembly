@@ -15,6 +15,12 @@
     .policy-page ul { padding-left: 20px; margin-bottom: 10px; }
     .policy-page ul li { color: rgba(240,240,240,.82); font-size: 13.5px; line-height: 1.85; list-style: disc; }
     .policy-page strong { color: var(--accent); }
+    @media (max-width: 768px) {
+      .policy-page { padding: 36px 16px 50px; }
+      .policy-page h1 { font-size: 28px; margin-bottom: 24px; }
+      .policy-page h2 { font-size: 15px; margin: 24px 0 8px; }
+      .policy-page p, .policy-page ul li { font-size: 13px; }
+    }
   </style>
 </head>
 <body>
@@ -25,13 +31,15 @@
         <span class="logo-text">NOCTIS ASSEMBLY</span>
       </a>
       <div class="header-right">
-        <button class="cart-btn" onclick="openCart()">
-          <i class="fa-solid fa-bag-shopping"></i>
-          <span class="cart-badge" id="cartBadge">0</span>
+        <a href="https://wa.me/p/29540746408898857/918891680805" target="_blank" class="btn-wa-order">
+          <i class="fa-brands fa-whatsapp"></i> Order Now
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobileNav()">
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
-    <nav class="nav-bar">
+    <nav class="nav-bar" id="mobileNav">
       <ul class="nav-list">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="shop.html" class="nav-link">Shop</a></li>
@@ -106,11 +114,6 @@
     <div class="footer-bottom"><p>&copy; 2026 Noctis Assembly. All Rights Reserved.</p></div>
   </footer>
   <a href="https://wa.me/918891680805" class="whatsapp-float" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-  <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
-  <aside class="cart-drawer" id="cartDrawer">
-    <div class="cart-header"><h3>Your Cart</h3><button class="cart-close" onclick="closeCart()"><i class="fa-solid fa-xmark"></i></button></div>
-    <div class="cart-items" id="cartItems"><p class="cart-empty">Your cart is empty.</p></div>
-  </aside>
   <script src="app.js"></script>
 </body>
 </html>

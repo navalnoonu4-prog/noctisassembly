@@ -222,6 +222,28 @@ document.addEventListener("keydown", e => {
 });
 
 /* =============================================
+   MOBILE NAVIGATION
+   ============================================= */
+function toggleMobileNav() {
+  const nav = document.getElementById("mobileNav") || document.querySelector(".nav-bar");
+  const btn = document.getElementById("hamburger") || document.querySelector(".hamburger");
+  if (!nav) return;
+  const isOpen = nav.classList.toggle("mobile-open");
+  if (btn) btn.classList.toggle("open", isOpen);
+}
+
+document.addEventListener("click", e => {
+  const nav = document.getElementById("mobileNav") || document.querySelector(".nav-bar");
+  const btn = document.getElementById("hamburger") || document.querySelector(".hamburger");
+  if (nav && nav.classList.contains("mobile-open")) {
+    if (!nav.contains(e.target) && (!btn || !btn.contains(e.target))) {
+      nav.classList.remove("mobile-open");
+      if (btn) btn.classList.remove("open");
+    }
+  }
+});
+
+/* =============================================
    INIT
    ============================================= */
 document.addEventListener("DOMContentLoaded", () => {

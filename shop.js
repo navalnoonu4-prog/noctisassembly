@@ -62,6 +62,15 @@ if (urlCat) {
   }
 }
 
+/* Mobile filter drawer toggle */
+function toggleShopSidebar() {
+  const sidebar = document.getElementById("shopSidebar");
+  const chevron = document.getElementById("filterChevron");
+  if (!sidebar) return;
+  sidebar.classList.toggle("open");
+  if (chevron) chevron.classList.toggle("rotate");
+}
+
 // Init
 document.addEventListener("DOMContentLoaded", () => {
   applyFilters();

@@ -31,9 +31,12 @@
         <a href="https://wa.me/p/29540746408898857/918891680805" target="_blank" class="btn-wa-order">
           <i class="fa-brands fa-whatsapp"></i> Order Now
         </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobileNav()">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
-    <nav class="nav-bar">
+    <nav class="nav-bar" id="mobileNav">
       <ul class="nav-list">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="shop.html" class="nav-link active">Shop</a></li>
@@ -52,8 +55,14 @@
 
   <!-- SHOP CONTENT -->
   <div class="shop-layout">
+    <!-- Mobile Filter Toggle Button -->
+    <button class="shop-filter-toggle" id="shopFilterToggle" onclick="toggleShopSidebar()">
+      <span><i class="fa-solid fa-sliders"></i> Filters &amp; Sort</span>
+      <i class="fa-solid fa-chevron-down toggle-chevron" id="filterChevron"></i>
+    </button>
+
     <!-- Sidebar Filters -->
-    <aside class="shop-sidebar">
+    <aside class="shop-sidebar" id="shopSidebar">
       <h3 class="sidebar-title">Filters</h3>
 
       <div class="filter-group">

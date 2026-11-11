@@ -37,6 +37,15 @@
     .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
     .success-msg { display:none; background:rgba(37,211,102,.1); border:1px solid rgba(37,211,102,.3); border-radius:8px; padding:14px; color:#25D366; font-size:13px; text-align:center; }
     .error-msg { display:none; background:rgba(235,0,27,.1); border:1px solid rgba(235,0,27,.3); border-radius:8px; padding:14px; color:#ff6b6b; font-size:13px; text-align:center; }
+    @media (max-width: 768px) {
+      .contact-wrap { padding: 36px 16px 50px; }
+      .contact-wrap h1 { font-size: 38px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+      .contact-form { padding: 20px 16px; }
+    }
+    @media (max-width: 480px) {
+      .contact-wrap h1 { font-size: 30px; letter-spacing: 2px; }
+    }
   </style>
 </head>
 <body>
@@ -50,9 +59,12 @@
         <a href="https://wa.me/p/29540746408898857/918891680805" target="_blank" class="btn-wa-order">
           <i class="fa-brands fa-whatsapp"></i> Order Now
         </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobileNav()">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
-    <nav class="nav-bar">
+    <nav class="nav-bar" id="mobileNav">
       <ul class="nav-list">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="shop.html" class="nav-link">Shop</a></li>

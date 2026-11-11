@@ -6,7 +6,8 @@
   <title>NOCTIS ASSEMBLY</title>
   <link rel="icon" href="logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&family=Big+Shoulders+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&family=Bebas+Neue&family=Big+Shoulders+Display:wght@700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
@@ -35,11 +36,14 @@
         <a href="https://wa.me/p/29540746408898857/918891680805" target="_blank" class="btn-wa-order">
           <i class="fa-brands fa-whatsapp"></i> Order Now
         </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobileNav()">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
 
     <!-- Nav -->
-    <nav class="nav-bar">
+    <nav class="nav-bar" id="mobileNav">
       <ul class="nav-list">
         <li><a href="index.html" class="nav-link active">Home</a></li>
         <li><a href="shop.html" class="nav-link">Shop</a></li>
@@ -63,7 +67,7 @@
     </div>
     <div class="hero-content">
       <h1 class="hero-title">NOCTIS ASSEMBLY</h1>
-      <p class="hero-sub">Every garment carries a story</p>
+      <p class="hero-sub">Feel Nice</p>
       <a href="shop.html" class="btn-explore">
         Explore <i class="fa-solid fa-arrow-up-right-from-square"></i>
       </a>
@@ -89,16 +93,6 @@
       <div class="feature-divider"></div>
       <div class="feature-item">
         <div class="feature-icon">
-          <i class="fa-solid fa-rotate-left"></i>
-        </div>
-        <div class="feature-text">
-          <strong>Easy Returns</strong>
-          <span>7-day hassle-free return &amp; exchange.</span>
-        </div>
-      </div>
-      <div class="feature-divider"></div>
-      <div class="feature-item">
-        <div class="feature-icon">
           <i class="fa-solid fa-shield-halved"></i>
         </div>
         <div class="feature-text">
@@ -115,14 +109,6 @@
       <span>NEW DROP ✦ NOCTIS ASSEMBLY ✦ LIMITED STOCK ✦ FREE SHIPPING ✦ NEW DROP ✦ NOCTIS ASSEMBLY ✦ LIMITED STOCK ✦ FREE SHIPPING ✦ NEW DROP ✦ NOCTIS ASSEMBLY ✦ LIMITED STOCK ✦ FREE SHIPPING ✦ NEW DROP ✦ NOCTIS ASSEMBLY ✦ LIMITED STOCK ✦ FREE SHIPPING ✦</span>
     </div>
   </div>
-  <!-- ===== FEATURED PRODUCT ===== -->
-  <section class="products-section" id="products">
-    <div class="section-header">
-      <h2 class="section-title">Act 01 — New Drop</h2>
-      <a href="shop.html" class="view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-    <div class="products-grid" id="productsGrid"></div>
-  </section>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
