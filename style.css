@@ -1202,15 +1202,24 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* ---- Tablet & Mobile (max-width: 768px) ---- */
 @media (max-width: 768px) {
-  /* Header layout */
+  /* Header layout: logo dead-center, navbar button on left */
   .header-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0 16px;
-    gap: 10px;
     height: 56px;
   }
+
   .logo-link {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-width: 0;
     gap: 8px;
+    text-align: center;
   }
   .logo-img {
     width: 36px;
@@ -1219,24 +1228,29 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .logo-text {
     font-size: 15px;
     letter-spacing: 1.5px;
+    display: block;
   }
 
   .header-right {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
     min-width: 0;
-    gap: 8px;
-    margin-left: auto;
+    display: flex;
+    align-items: center;
   }
 
-  /* Hamburger visible */
+  /* Hamburger visible on the left */
   .hamburger {
     display: flex;
+    margin: 0;
   }
 
-  /* Compact Order button */
+  /* Remove WhatsApp order button in mobile navbar */
   .btn-wa-order {
-    padding: 7px 12px;
-    font-size: 12px;
-    gap: 5px;
+    display: none !important;
   }
 
   /* Search & Track button hidden in compact header */
@@ -1465,11 +1479,20 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* ---- Small Mobile (max-width: 480px) ---- */
 @media (max-width: 480px) {
-  .logo-text {
-    display: none;
-  }
   .header-inner {
     padding: 0 14px;
+  }
+  .header-right {
+    left: 14px;
+  }
+  .logo-link {
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .logo-text {
+    font-size: 13.5px;
+    letter-spacing: 1px;
+    display: block;
   }
   .hero-title {
     font-size: clamp(26px, 8.5vw, 36px);
