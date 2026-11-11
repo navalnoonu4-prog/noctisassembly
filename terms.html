@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms &amp; Conditions — NOCTIS ASSEMBLY</title>
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&family=Big+Shoulders+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .policy-page { max-width: 760px; margin: 0 auto; padding: 60px 24px 80px; }
+    .policy-page h1 { font-size: 36px; font-weight: 500; color: var(--accent); margin-bottom: 36px; text-align: center; }
+    .policy-page h2 { font-size: 16px; font-weight: 700; color: var(--accent); margin: 32px 0 10px; }
+    .policy-page p { color: rgba(240,240,240,.82); font-size: 13.5px; line-height: 1.85; margin-bottom: 10px; }
+    .policy-page ul { padding-left: 20px; margin-bottom: 10px; }
+    .policy-page ul li { color: rgba(240,240,240,.82); font-size: 13.5px; line-height: 1.85; list-style: disc; }
+    .policy-page strong { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="logo.png" alt="Noctis Assembly" class="logo-img" />
+        <span class="logo-text">NOCTIS ASSEMBLY</span>
+      </a>
+      <div class="header-right">
+        <button class="cart-btn" onclick="openCart()">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-bar">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="shop.html" class="nav-link">Shop</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="policy-page">
+    <h1>Terms &amp; Conditions</h1>
+
+    <h2>Acceptance of Terms</h2>
+    <p>By using Noctis Assembly, you agree to be bound by these terms and conditions.</p>
+
+    <h2>Use License</h2>
+    <p>You may use Noctis Assembly for personal, non-commercial purposes only.</p>
+
+    <h2>Disclaimer</h2>
+    <p>Noctis Assembly is provided "as is" without warranties of any kind.</p>
+
+    <h2>Limitations</h2>
+    <p>Noctis Assembly and its suppliers shall not be liable for any damages arising from the use of this service.</p>
+
+    <h2>Modifications</h2>
+    <p>We may revise these terms at any time without notice.</p>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-top" style="max-width:1200px;margin:0 auto;padding:32px 24px;display:flex;flex-wrap:wrap;gap:40px;">
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="shipping-policy.html">Shipping Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Noctis Assembly. All Rights Reserved.</p></div>
+  </footer>
+  <a href="https://wa.me/918891680805" class="whatsapp-float" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+  <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header"><h3>Your Cart</h3><button class="cart-close" onclick="closeCart()"><i class="fa-solid fa-xmark"></i></button></div>
+    <div class="cart-items" id="cartItems"><p class="cart-empty">Your cart is empty.</p></div>
+  </aside>
+  <script src="app.js"></script>
+</body>
+</html>

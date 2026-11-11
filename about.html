@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — NOCTIS ASSEMBLY</title>
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .policy-page { max-width: 760px; margin: 0 auto; padding: 60px 24px; }
+    .policy-page h1 { font-family:'Bebas Neue',sans-serif; font-size:48px; letter-spacing:4px; color:var(--accent); margin-bottom:8px; }
+    .policy-page .sub { color:var(--muted); font-size:14px; margin-bottom:40px; }
+    .policy-page h2 { font-family:'Bebas Neue',sans-serif; font-size:26px; letter-spacing:2px; margin:36px 0 10px; color:var(--accent); }
+    .policy-page p, .policy-page li { color: rgba(240,240,240,.8); font-size:14px; line-height:1.8; margin-bottom:12px; }
+    .about-hero { display:flex; gap:40px; align-items:center; flex-wrap:wrap; margin-bottom:60px; }
+    .about-hero img { flex:1; min-width:200px; max-width:380px; border-radius:12px; object-fit:cover; height:420px; border:1px solid var(--border); }
+    .about-hero-text { flex:1; min-width:260px; }
+    .about-hero-text h1 { font-family:'Bebas Neue',sans-serif; font-size:52px; letter-spacing:4px; color:var(--accent); line-height:1; margin-bottom:16px; }
+    .about-hero-text p { color:rgba(240,240,240,.75); font-size:14px; line-height:1.9; }
+    .value-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:16px; margin-top:40px; }
+    .value-card { background:var(--bg2); border:1px solid var(--border); border-radius:10px; padding:24px 20px; text-align:center; }
+    .value-card i { font-size:28px; color:var(--accent); margin-bottom:12px; }
+    .value-card h3 { font-size:14px; font-weight:600; margin-bottom:6px; }
+    .value-card p { font-size:12px; color:var(--muted); margin:0; }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="logo.png" alt="Noctis Assembly" class="logo-img" />
+        <span class="logo-text">NOCTIS ASSEMBLY</span>
+      </a>
+      <div class="header-right">
+        <a href="https://wa.me/p/29540746408898857/918891680805" target="_blank" class="btn-wa-order">
+          <i class="fa-brands fa-whatsapp"></i> Order Now
+        </a>
+      </div>
+    </div>
+    <nav class="nav-bar">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="shop.html" class="nav-link">Shop</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="policy-page">
+    <div class="about-hero">
+      <img src="images/front leg.jpg" alt="Noctis Assembly Editorial" />
+      <div class="about-hero-text">
+        <h1>NOCTIS ASSEMBLY</h1>
+        <p style="font-size:13px;letter-spacing:3px;color:var(--muted);margin-bottom:20px;text-transform:uppercase">Every garment carries a story</p>
+        <p>Noctis Assembly is a streetwear brand born from the shadows — built for those who move between worlds, who wear their silence like armour.</p>
+        <p>We craft limited-edition pieces that fuse dark aesthetics with premium fabrics. No fast fashion. No compromises. Each drop is intentional, each piece a statement.</p>
+        <p>Founded in 2024, we've been dressing the quiet rebels — the ones who don't follow trends, they set them.</p>
+      </div>
+    </div>
+    <div class="value-grid">
+      <div class="value-card">
+        <i class="fa-solid fa-gem"></i>
+        <h3>Premium Quality</h3>
+        <p>Only the finest fabrics make it into our collection.</p>
+      </div>
+      <div class="value-card">
+        <i class="fa-solid fa-layer-group"></i>
+        <h3>Limited Drops</h3>
+        <p>Every piece is released in limited quantities. Own something rare.</p>
+      </div>
+      <div class="value-card">
+        <i class="fa-solid fa-leaf"></i>
+        <h3>Sustainable</h3>
+        <p>Ethical sourcing and responsible production always.</p>
+      </div>
+      <div class="value-card">
+        <i class="fa-solid fa-users"></i>
+        <h3>Community</h3>
+        <p>Built by the culture, for the culture.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Noctis Assembly. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <a href="https://wa.me/918891680805" class="whatsapp-float" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+  <script src="app.js"></script>
+</body>
+</html>
