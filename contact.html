@@ -8,43 +8,60 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    .contact-wrap { max-width:900px; margin:0 auto; padding:60px 24px; }
-    .contact-wrap h1 { font-family:'Bebas Neue',sans-serif; font-size:48px; letter-spacing:4px; color:var(--accent); margin-bottom:8px; }
-    .contact-wrap .sub { color:var(--muted); margin-bottom:40px; font-size:14px; }
-    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; }
-    @media(max-width:640px){ .contact-grid{grid-template-columns:1fr;} }
-    .contact-info { display:flex; flex-direction:column; gap:20px; }
-    .ci-row { display:flex; gap:14px; align-items:flex-start; }
-    .ci-row i { font-size:18px; color:var(--accent); margin-top:3px; flex-shrink:0; }
-    .ci-row h4 { font-size:12px; letter-spacing:1px; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
-    .ci-row p { font-size:13px; color:var(--text); }
-    .contact-form { background:var(--bg2); border:1px solid var(--border); border-radius:14px; padding:28px; display:flex; flex-direction:column; gap:14px; }
-    .contact-form h3 { font-family:'Bebas Neue',sans-serif; font-size:22px; letter-spacing:2px; margin-bottom:4px; color:var(--accent); }
-    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-    @media(max-width:480px){ .form-row{grid-template-columns:1fr;} }
+    .contact-wrap { max-width: 960px; margin: 0 auto; padding: 60px 24px 80px; }
+    .contact-header { text-align: center; margin-bottom: 40px; }
+    .contact-header h1 { font-family: 'Bebas Neue', sans-serif; font-size: 52px; letter-spacing: 4px; color: var(--accent); margin-bottom: 6px; line-height: 1; }
+    .contact-header .sub { color: var(--muted); font-size: 14px; letter-spacing: 0.5px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: stretch; }
+    .contact-info {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 14px;
+      padding: 32px 28px; display: flex; flex-direction: column; gap: 24px;
+    }
+    .contact-info h3, .contact-form h3 {
+      font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 2px;
+      margin-bottom: 4px; color: var(--accent);
+    }
+    .ci-row { display: flex; gap: 16px; align-items: center; }
+    .ci-icon {
+      width: 42px; height: 42px; border-radius: 10px; background: var(--bg3);
+      border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
+      color: var(--accent); font-size: 17px; flex-shrink: 0;
+    }
+    .ci-row h4 { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+    .ci-row p { font-size: 13.5px; color: var(--text); line-height: 1.4; }
+    .ci-row a { transition: color .2s; }
+    .ci-row a:hover { color: var(--accent); }
+    .contact-form {
+      background: var(--bg2); border: 1px solid var(--border); border-radius: 14px;
+      padding: 32px 28px; display: flex; flex-direction: column; gap: 14px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     .form-input, .form-textarea {
-      background:var(--bg3); border:1px solid var(--border); border-radius:8px;
-      padding:11px 14px; color:var(--text); font-size:13px; outline:none;
-      font-family:inherit; transition:border-color .2s;
+      width: 100%; box-sizing: border-box; background: var(--bg3); border: 1px solid var(--border);
+      border-radius: 8px; padding: 12px 14px; color: var(--text); font-size: 13px; outline: none;
+      font-family: inherit; transition: border-color .2s;
     }
-    .form-input:focus, .form-textarea:focus { border-color:#555; }
-    .form-textarea { resize:vertical; min-height:110px; }
+    .form-input:focus, .form-textarea:focus { border-color: #555; }
+    .form-textarea { resize: vertical; min-height: 110px; }
     .btn-submit {
-      background:var(--accent); color:#000; border-radius:24px; padding:13px;
-      font-size:14px; font-weight:700; letter-spacing:1px; transition:background .2s;
+      width: 100%; background: var(--accent); color: #000; border-radius: 24px; padding: 13px;
+      font-size: 14px; font-weight: 700; letter-spacing: 1px; transition: background .2s, transform .15s;
+      cursor: pointer; margin-top: 4px;
     }
-    .btn-submit:hover { background:#ddd; }
+    .btn-submit:hover { background: #ddd; transform: translateY(-1px); }
     .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
-    .success-msg { display:none; background:rgba(37,211,102,.1); border:1px solid rgba(37,211,102,.3); border-radius:8px; padding:14px; color:#25D366; font-size:13px; text-align:center; }
-    .error-msg { display:none; background:rgba(235,0,27,.1); border:1px solid rgba(235,0,27,.3); border-radius:8px; padding:14px; color:#ff6b6b; font-size:13px; text-align:center; }
+    .success-msg { display: none; background: rgba(37,211,102,.1); border: 1px solid rgba(37,211,102,.3); border-radius: 8px; padding: 14px; color: #25D366; font-size: 13px; text-align: center; }
+    .error-msg { display: none; background: rgba(235,0,27,.1); border: 1px solid rgba(235,0,27,.3); border-radius: 8px; padding: 14px; color: #ff6b6b; font-size: 13px; text-align: center; }
     @media (max-width: 768px) {
       .contact-wrap { padding: 36px 16px 50px; }
-      .contact-wrap h1 { font-size: 38px; }
-      .contact-grid { grid-template-columns: 1fr; gap: 28px; }
-      .contact-form { padding: 20px 16px; }
+      .contact-header { margin-bottom: 28px; }
+      .contact-header h1 { font-size: 40px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 20px; }
+      .contact-info, .contact-form { padding: 24px 18px; }
     }
     @media (max-width: 480px) {
-      .contact-wrap h1 { font-size: 30px; letter-spacing: 2px; }
+      .contact-header h1 { font-size: 32px; letter-spacing: 2px; }
+      .form-row { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -75,36 +92,39 @@
   </header>
 
   <div class="contact-wrap">
-    <h1>Contact Us</h1>
-    <p class="sub">We'd love to hear from you.</p>
+    <div class="contact-header">
+      <h1>Contact Us</h1>
+      <p class="sub">We'd love to hear from you.</p>
+    </div>
     <div class="contact-grid">
       <div class="contact-info">
+        <h3>Contact Info</h3>
         <div class="ci-row">
-          <i class="fa-solid fa-envelope"></i>
+          <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
           <div>
             <h4>Email</h4>
-            <p>noctisassembly@gmail.com</p>
+            <p><a href="mailto:noctisassembly@gmail.com" style="color:var(--text)">noctisassembly@gmail.com</a></p>
           </div>
         </div>
         <div class="ci-row">
-          <i class="fa-brands fa-whatsapp"></i>
+          <div class="ci-icon"><i class="fa-brands fa-whatsapp"></i></div>
           <div>
             <h4>WhatsApp</h4>
-            <p>8891680805</p>
+            <p><a href="https://wa.me/918891680805" target="_blank" style="color:var(--text)">8891680805</a></p>
           </div>
         </div>
         <div class="ci-row">
-          <i class="fa-brands fa-instagram"></i>
+          <div class="ci-icon"><i class="fa-brands fa-instagram"></i></div>
           <div>
             <h4>Instagram</h4>
             <p><a href="https://www.instagram.com/noctisassembly?srtk=MXV0dHd4dnd6NW9kNQ==" target="_blank" style="color:var(--accent)">@noctisassembly</a></p>
           </div>
         </div>
         <div class="ci-row">
-          <i class="fa-solid fa-clock"></i>
+          <div class="ci-icon"><i class="fa-solid fa-clock"></i></div>
           <div>
             <h4>Response Time</h4>
-            <p>We reply within 24 hours on business days.</p>
+            <p>Within 24 hours on business days</p>
           </div>
         </div>
       </div>
@@ -124,6 +144,32 @@
   </div>
 
   <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Noctis Assembly" class="footer-logo" />
+        <p class="footer-tagline">Feel Nice</p>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="shipping-policy.html">Shipping Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-follow">
+        <h4>Follow us:</h4>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/noctisassembly?srtk=MXV0dHd4dnd6NW9kNQ==" class="social-btn instagram" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="social-btn whatsapp" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
     <div class="footer-bottom">
       <p>&copy; 2026 Noctis Assembly. All Rights Reserved.</p>
     </div>
